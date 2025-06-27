@@ -1,0 +1,259 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #5c1a1b;
+  color: #333;
+}
+
+
+.header {
+  background-color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 4px solid maroon;
+}
+
+.header h1 {
+  margin: 0;
+  color: maroon;
+}
+
+.header p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+
+.admission-box {
+  text-align: center;
+  border: 2px dashed maroon;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.admission-box h2 {
+  color: maroon;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.course-grid button {
+  padding: 10px;
+  font-weight: bold;
+  background-color: maroon;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.content-box {
+  display: none;
+  background-color: #f9f9f9;
+  border-left: 4px solid maroon;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.content-box img {
+  width: 100px;
+  display: block;
+  margin: 10px auto;
+}
+
+.sub-buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sub-buttons button {
+  padding: 8px 12px;
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.footer {
+  text-align: center;
+  color: white;
+  background-color: maroon;
+  padding: 12px;
+  margin-top: 20px;
+}
+
+/* Image Slider */
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+  background-color: #fff0f0;
+  border: 3px solid maroon;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.slider-container img {
+  width: 280px;
+  height: 180px;
+  border: 3px solid maroon;
+  border-radius: 10px;
+}
+
+.slider-btn {
+  font-size: 24px;
+  background-color: maroon;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #fffde7;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #4a148c;
+  margin-bottom: 20px;
+}
+
+.friend-box {
+  display: none;
+  background-color: #fff;
+  border: 2px solid #ffd600;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.friend-box img {
+  width: 120px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.friend-box p {
+  font-weight: bold;
+  color: maroon;
+  font-size: 18px;
+}
+.classmate-item {
+  margin-bottom: 10px;
+}
+
+.classmate-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #6200ea;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.classmate-button:hover,
+.classmate-button.active {
+  background-color:#800000;
+}
+
+.teacher-box {
+  display: none;
+  background-color: #fff;
+  border: 2px solid #ffd600;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.teacher-box img {
+  width: 120px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.teacher-box p {
+  font-weight: bold;
+  color: maroon;
+  font-size: 18px;
+}
+#me {
+  display: none;
+  background-color: #fff;
+  border: 2px solid #ffd600;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 10px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+#me img {
+  width: 120px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#me p:first-of-type {
+  font-weight: bold;
+  font-size: 18px;
+  color: maroon;
+}
+
+#me p:nth-of-type(2) {
+  color: #4a148c;
+  font-size: 17px;
+  text-align: left;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+.classmate-info {
+  display: none;
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #fff;
+  border: 2px solid #ffd600;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.classmate-info img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.classmate-info p {
+  font-weight: bold;
+  color: #e65100;
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
