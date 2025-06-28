@@ -270,8 +270,9 @@ h2 {
 }
 
 .slider-wrapper {
-  width: 280px;
-  height: 180px;
+  width: 100%;
+  max-width: 360px; /* 👈 Customize this value: try 360, 400, 450 as per your photo */
+  height: 240px;
   position: relative;
   display: flex;
   align-items: center;
