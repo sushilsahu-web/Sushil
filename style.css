@@ -271,8 +271,8 @@ h2 {
 
 .slider-wrapper {
   width: 100%;
-  max-width: 360px; /* 👈 Customize this value: try 360, 400, 450 as per your photo */
-  height: 240px;
+  max-width: 400px; /* 👈 Bigger width (horizontal) */
+  aspect-ratio: 16 / 9; /* ✅ Perfect widescreen ratio */
   position: relative;
   display: flex;
   align-items: center;
