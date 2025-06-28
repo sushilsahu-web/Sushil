@@ -27,7 +27,7 @@ const classmates = [
   "Shyaam Rathia", "Jitesh Rathia", "Omprakash Pradhan", "Deepak Yadav", "Narsing Yadav",
   "Avinash Ajgalle", "Akhil Tirkey", "Abhishek Tigga", "Adan Ekka", "Benjamin Toppo",
   "Anuraj Tirkey", "Anurag Toppo", "Sandip Lakra", "Lokesh Kumar Mahant", "Yogesh Sarthi",
-  "Rohan Sidar", "Roopa Rathia", "Ansuiya Rathia", "Neha Sarthi", "Kanchan Mahanand",
+  "Rohan Sidar", "Roopa Rathia", "Ansuiya Rathia", "Nisha Sarthi", "Kanchan Mahanand",
   "Shraddha Miree", "Siddhi Rani Dansena", "Monika Gupta", "Annpurna Mahant", "Anastasia"
 ];
 
@@ -91,9 +91,8 @@ document.getElementById("mainClassmateBtn").addEventListener("click", () => {
 
 // Slider
 const sliderImages = [
-  "a2.jpg", "a3.jpg", "a4.jpg", "a5.jpg",
-  "a6.jpg", "a7.jpg", "a8.jpg", "a.9", "kaj10.webp",
-  "kaj11.webp", "kaj12.webp", "kaj13.jpg", "kaj14.webp", "kaj15.jpg"
+  "a2.jpg", "a3.jpg", "a4.png", "a5.jpg",
+  "a6.jpg", "a7.jpg"
 ];
 
 let currentSlide = 0;
