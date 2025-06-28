@@ -100,7 +100,17 @@ let currentSlide = 0;
 function showSlide(index) {
   const img = document.getElementById("slider-image");
   currentSlide = (index + sliderImages.length) % sliderImages.length;
-  img.src = sliderImages[currentSlide];
+
+  const realSrc = sliderImages[currentSlide];
+  img.classList.remove("loaded");
+  img.src = "blur.jpg"; // Placeholder image
+
+  const tempImg = new Image();
+  tempImg.src = realSrc;
+  tempImg.onload = function () {
+    img.src = realSrc;
+    img.classList.add("loaded");
+  };
 }
 
 function nextSlide() {
