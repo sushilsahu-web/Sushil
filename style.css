@@ -268,11 +268,9 @@ h2 {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
 .slider-wrapper {
-  width: 100%;
-  max-width: 400px; /* 👈 Bigger width (horizontal) */
-  aspect-ratio: 16 / 9; /* ✅ Perfect widescreen ratio */
+  width: 280px;
+  height: 180px;
   position: relative;
   display: flex;
   align-items: center;
@@ -281,7 +279,7 @@ h2 {
 .slider-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* ✅ Yeh image ka asli ratio maintain karega */
+  object-fit: contain; /* Keep original aspect ratio */
   border: 3px solid maroon;
   border-radius: 10px;
 }
