@@ -253,13 +253,36 @@ h2 {
   font-size: 18px;
 }
 
-  #slider-image {
-  filter: blur(8px);
-  transition: filter 0.4s ease;
+/* Loader Animation */
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid maroon;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: auto;
 }
 
-#slider-image.loaded {
-  filter: blur(0);
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.slider-wrapper {
+  width: 280px;
+  height: 180px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  border: 3px solid maroon;
+  border-radius: 10px;
 }
 
 @keyframes fadeIn {
