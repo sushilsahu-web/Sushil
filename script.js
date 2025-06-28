@@ -99,17 +99,21 @@ let currentSlide = 0;
 
 function showSlide(index) {
   const img = document.getElementById("slider-image");
+  const loader = document.getElementById("image-loader");
   currentSlide = (index + sliderImages.length) % sliderImages.length;
 
   const realSrc = sliderImages[currentSlide];
-  img.classList.remove("loaded");
-  img.src = "blur.jpg"; // Placeholder image
+
+  img.style.display = "none";
+  loader.style.display = "block";
 
   const tempImg = new Image();
   tempImg.src = realSrc;
+
   tempImg.onload = function () {
     img.src = realSrc;
-    img.classList.add("loaded");
+    img.style.display = "block";
+    loader.style.display = "none";
   };
 }
 
