@@ -131,24 +131,35 @@ window.onload = function () {
 const music = document.getElementById("backgroundMusic");
 const musicBtn = document.getElementById("musicBtn");
 
-musicBtn.textContent = "🔇";  // By default muted
+// Start in muted state
+music.muted = true;
+musicBtn.textContent = "🔇";
 
+// Mute/Unmute Button Logic
 function toggleMusic() {
-  music.muted = !music.muted;
-  musicBtn.textContent = music.muted ? "🔇" : "🔈";
-
-  if (music.paused) {
-    music.play().catch(e => console.log("Autoplay blocked:", e));
+  if (music.muted) {
+    music.muted = false;
+    music.play().catch(e => console.log("Autoplay error:", e));
+    musicBtn.textContent = "🔈";
+  } else {
+    music.muted = true;
+    music.pause();
+    musicBtn.textContent = "🔇";
   }
 }
 
+// Autoplay when slider in view
 const slider = document.querySelector(".slider-container");
 
 const observer = new IntersectionObserver(
   function (entries) {
     entries.forEach(entry => {
-      if (entry.isIntersecting && music.paused) {
-        music.play().catch(e => console.log("Autoplay error:", e));
+      if (entry.isIntersecting) {
+        if (!music.muted) {
+          music.play().catch(e => console.log("Play error:", e));
+        }
+      } else {
+        music.pause(); // Pause when slider is out of view
       }
     });
   },
