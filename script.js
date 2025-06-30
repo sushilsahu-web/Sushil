@@ -131,19 +131,23 @@ window.onload = function () {
 const music = document.getElementById("backgroundMusic");
 const musicBtn = document.getElementById("musicBtn");
 
-// Mute/unmute toggle
+musicBtn.textContent = "🔇";  // By default muted
+
 function toggleMusic() {
   music.muted = !music.muted;
   musicBtn.textContent = music.muted ? "🔇" : "🔈";
+
+  if (music.paused) {
+    music.play().catch(e => console.log("Autoplay blocked:", e));
+  }
 }
 
-// Auto-play when slider is visible
 const slider = document.querySelector(".slider-container");
 
 const observer = new IntersectionObserver(
   function (entries) {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && music.paused) {
         music.play().catch(e => console.log("Autoplay error:", e));
       }
     });
