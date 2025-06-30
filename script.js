@@ -128,3 +128,27 @@ function prevSlide() {
 window.onload = function () {
   showSlide(currentSlide);
 };
+const music = document.getElementById("backgroundMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+// Mute/unmute toggle
+function toggleMusic() {
+  music.muted = !music.muted;
+  musicBtn.textContent = music.muted ? "🔇" : "🔈";
+}
+
+// Auto-play when slider is visible
+const slider = document.querySelector(".slider-container");
+
+const observer = new IntersectionObserver(
+  function (entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        music.play().catch(e => console.log("Autoplay error:", e));
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+observer.observe(slider);
