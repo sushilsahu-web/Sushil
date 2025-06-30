@@ -289,3 +289,24 @@ h2 {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.slider-wrapper {
+  position: relative; /* Needed to position child icon inside it */
+}
+
+.music-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.music-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
