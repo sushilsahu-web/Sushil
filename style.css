@@ -90,6 +90,24 @@ body {
   margin-top: 20px;
 }
 
+
+.follow-insta-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #800000; /* Instagram pink */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.follow-insta-btn:hover {
+  background-color: #c2185b;
+}
+
 /* Image Slider */
 .slider-container {
   display: flex;
