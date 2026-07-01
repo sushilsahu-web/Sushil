@@ -91,8 +91,18 @@ document.getElementById("mainClassmateBtn").addEventListener("click", () => {
 
 // Slider
 const sliderImages = [
-  "a1.jpg","a2.jpg", "a3.jpg", "a4.png", "a5.jpg",
-  "a6.jpg", "a7.jpg"
+  "a1.jpg", "a2.jpg", "a3.jpg", "a4.png", "a5.jpg",
+  "a6.jpg", "a7.jpg",
+
+  "prime1.jpg",
+  "prime2.jpg",
+  "prime3.jpg",
+  "prime4.jpg",
+  "prime5.jpg",
+  "prime6.jpg",
+  "prime7.jpg",
+  "prime8.jpg",
+  "prime9.jpg"
 ];
 
 let currentSlide = 0;
